@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+/* eslint-disable consistent-return */
 import axios from 'axios';
 
 const plus = async (x, y) => {
@@ -6,13 +7,14 @@ const plus = async (x, y) => {
   try {
     const response = await axios.get(encoded);
     console.log(response.data);
+    return response.data;
   } catch (err) {
     if (err.response) {
       console.error(err.response.data);
       console.error(err.response.status);
       console.error(err.response.headers);
     }
-    if (err.request) console.error('GET request error', err.message);
+    if (err.request) console.log('GET request error', err.message);
     console.error(err.config);
   }
 };

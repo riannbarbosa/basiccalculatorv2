@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable no-console */
 import axios from 'axios';
 
@@ -6,6 +7,7 @@ const divide = async (x, y) => {
   try {
     const response = await axios.get(encoded);
     console.log(response.data);
+    return response.data;
   } catch (err) {
     if (err.response) {
       console.error(err.response.data);

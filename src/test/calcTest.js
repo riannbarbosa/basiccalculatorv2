@@ -6,49 +6,44 @@ import {
   divide, plus, sub, times,
 } from '../calc';
 
-// const sum = () => plus(9, 9).catch(error => error);
-
-const div = () => divide(9, 9).catch((error) => error);
-
-const subtract = () => sub(9, 9).catch((error) => error);
-
-const timess = () => times(9, 9).catch((error) => error);
-
 describe('Testing calc operations (+,/,-,*)', () => {
   describe('#plus', () => {
-    it('1 - Should return the value of  9 + 9, that is equals to 18', async () => {
-      assert.equal(await plus(9, 9), 18);
-      done();
+    it('1 - Should return the value of  9 + 9, that is equals to 18', (done) => {
+      plus(9, 9)
+        .then((res) => {
+          assert.equal(res, 18);
+        })
+        .then(() => done(), done);
     });
   });
 });
 
 describe('#divide', () => {
-  it('2 - Should return the value of  9 / 9, that is equals to 1', async () => {
-    const res = div();
-    res.then((testRes) => {
-      assert.equal(testRes, 1);
-      done();
-    });
+  it('2 - Should return the value of  9 / 9, that is equals to 1', (done) => {
+    divide(9, 9)
+      .then((res) => {
+        assert.equal(res, 1);
+      })
+      .then(() => done(), done);
   });
 });
 
 describe('#sub', () => {
-  it('3 - Should return the value of  9 - 9, that is equals to 0', async () => {
-    const res = subtract();
-    res.then((testRes) => {
-      assert.equal(testRes, 0);
-      done();
-    });
+  it('3 - Should return the value of  9 - 9, that is equals to 0', (done) => {
+    sub(9, 9)
+      .then((res) => {
+        assert.equal(res, 0);
+      })
+      .then(() => done(), done);
   });
 });
 
 describe('#times', () => {
-  it('4 - Should return the value of  9 * 9, that is equals to 81', async () => {
-    const res = timess();
-    res.then((testRes) => {
-      assert.equal(testRes, 81);
-      done();
-    });
+  it('4 - Should return the value of  9 * 9, that is equals to 81', (done) => {
+    times(9, 9)
+      .then((res) => {
+        assert.equal(res, 81);
+      })
+      .then(() => done(), done);
   });
 });
