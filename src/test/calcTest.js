@@ -39,7 +39,7 @@ describe('Testing calc operations (+,/,-,*)', () => {
   });
 
   describe('#divide', () => {
-    it('2 - Should return the value of  9 / 9, that is equals to 18', async () => {
+    it('2 - Should return the value of  9 / 9, that is equals to 1', async () => {
       let res = div();
       res.then(testRes => {
         assert.equal(testRes, 1);
@@ -49,7 +49,7 @@ describe('Testing calc operations (+,/,-,*)', () => {
   });
 
   describe('#sub', () => {
-    it('3 - Should return the value of  9 - 9, that is equals to 18', async () => {
+    it('3 - Should return the value of  9 - 9, that is equals to 0', async () => {
       let res = subtract();
       res.then(testRes => {
         assert.equal(testRes, 0);
@@ -59,7 +59,7 @@ describe('Testing calc operations (+,/,-,*)', () => {
   });
 
   describe('#times', () => {
-    it('4 - Should return the value of  9 * 9, that is equals to 18', async () => {
+    it('4 - Should return the value of  9 * 9, that is equals to 81', async () => {
       let res = timess();
       res.then(testRes => {
         assert.equal(testRes, 81);

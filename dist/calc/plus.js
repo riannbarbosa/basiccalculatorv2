@@ -21,7 +21,7 @@ var plus = function () {
             return _axios["default"].get(encoded);
           case 4:
             response = _context.sent;
-            console.log(response.data);
+            console.log(response);
             _context.next = 13;
             break;
           case 8:
