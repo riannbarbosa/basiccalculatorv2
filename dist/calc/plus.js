@@ -21,7 +21,7 @@ var plus = function () {
             return _axios["default"].get(encoded);
           case 4:
             response = _context.sent;
-            console.log(response);
+            console.log(response.data);
             _context.next = 13;
             break;
           case 8:
@@ -32,7 +32,7 @@ var plus = function () {
               console.error(_context.t0.response.status);
               console.error(_context.t0.response.headers);
             }
-            if (_context.t0.request) console.log('GET request error', _context.t0.message);
+            if (_context.t0.request) console.error('GET request error', _context.t0.message);
             console.error(_context.t0.config);
           case 13:
           case "end":

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import axios from 'axios';
 
 const sub = async (x, y) => {
@@ -11,7 +12,7 @@ const sub = async (x, y) => {
       console.error(err.response.status);
       console.error(err.response.headers);
     }
-    if (err.request) console.log('GET request error', err.message);
+    if (err.request) console.error('GET request error', err.message);
     console.error(err.config);
   }
 };

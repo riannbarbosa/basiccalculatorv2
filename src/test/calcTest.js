@@ -1,38 +1,26 @@
+/* eslint-disable no-undef */
 // Need to test all calc operations in calc/ folder
 // using mocha and chai
 import assert from 'assert';
-import { expect } from 'chai';
-import { divide, plus, sub, times } from '../calc';
+import {
+  divide, plus, sub, times,
+} from '../calc';
 
-const sum = () => {
-  return plus(9,9).catch(error => {
-    return error;
-  });
-};
+const sum = () => plus(9, 9).catch((error) => error);
 
-const div = () => {
-  return divide(9,9).catch(error => {
-    return error;
-  });
-};
+const div = () => divide(9, 9).catch((error) => error);
 
-const subtract = () => {
-  return sub(9,9).catch(error => {
-    return error;
-  });
-};
+const subtract = () => sub(9, 9).catch((error) => error);
 
-const timess = () => {
-  return times(9,9).catch(error => {
-    return error;
-  });
-};
+const timess = () => times(9, 9).catch((error) => error);
+
 describe('Testing calc operations (+,/,-,*)', () => {
   describe('#plus', () => {
     it('1 - Should return the value of  9 + 9, that is equals to 18', async () => {
-      let res = sum();
-      res.then(testRes => {
+      const res = sum();
+      res.then((testRes) => {
         assert.equal(testRes, 18);
+        // eslint-disable-next-line no-undef
         done();
       });
     });
@@ -40,8 +28,8 @@ describe('Testing calc operations (+,/,-,*)', () => {
 
   describe('#divide', () => {
     it('2 - Should return the value of  9 / 9, that is equals to 1', async () => {
-      let res = div();
-      res.then(testRes => {
+      const res = div();
+      res.then((testRes) => {
         assert.equal(testRes, 1);
         done();
       });
@@ -50,8 +38,8 @@ describe('Testing calc operations (+,/,-,*)', () => {
 
   describe('#sub', () => {
     it('3 - Should return the value of  9 - 9, that is equals to 0', async () => {
-      let res = subtract();
-      res.then(testRes => {
+      const res = subtract();
+      res.then((testRes) => {
         assert.equal(testRes, 0);
         done();
       });
@@ -60,8 +48,8 @@ describe('Testing calc operations (+,/,-,*)', () => {
 
   describe('#times', () => {
     it('4 - Should return the value of  9 * 9, that is equals to 81', async () => {
-      let res = timess();
-      res.then(testRes => {
+      const res = timess();
+      res.then((testRes) => {
         assert.equal(testRes, 81);
         done();
       });
