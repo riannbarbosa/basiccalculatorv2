@@ -11,20 +11,6 @@ Just a script of a basic calculator that do 4 operations: **plus**, **division**
 
 **Usage example**
 
-```
-var justabasiccalculator = require("justabasiccalculator")
-
-const example = justabasiccalculator.plus(num1, num2); 
-```
-Or
-
-```
-import { plus } from 'justabasiccalculator';
-
-const example = plus(num1, num2);
-```
---------------------------------------
-
 For async function, now just call like the example above:
 
 ```
